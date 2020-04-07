@@ -129,6 +129,8 @@ void TTKToolsApplication::labelModuleChanged(int index)
             break;
         case 16: w = new TTKCrossLineLabelProperty;
             break;
+        case 17: w = new TTKNetTrafficLabelProperty;
+            break;
         default:
             break;
     }
@@ -360,6 +362,8 @@ void TTKToolsApplication::widgetModuleChanged(int index)
             break;
         case 10: w = new TTKCalendarWidgetProperty;
             break;
+        case 11: w = new TTKPuzzleWidgetProperty;
+            break;
         default:
             break;
     }
@@ -446,6 +450,7 @@ void TTKToolsApplication::createLabelModule()
     widget->addItem(":/icon/label", "TTKLightPointLabel");
     widget->addItem(":/icon/label", "TTKScanLabel");
     widget->addItem(":/icon/label", "TTKCrossLineLabel");
+    widget->addItem(":/icon/label", "TTKNetTrafficLabel");
 
     widget->setObjectName("labelRow");
     widget->setStyleSheet("#labelRow{background-color:rgba(255, 126, 0, 50)}");
@@ -579,6 +584,7 @@ void TTKToolsApplication::createWidgetModule()
     widget->addItem(":/icon/widget", "TTKCustomPieWidget");
     widget->addItem(":/icon/widget", "TTKCustomRingWidget");
     widget->addItem(":/icon/widget", "TTKCalendarWidget");
+    widget->addItem(":/icon/widget", "TTKPuzzleWidget");
 
     widget->setObjectName("widgetRow");
     widget->setStyleSheet("#widgetRow{background-color:rgba(18, 35, 52, 50)}");

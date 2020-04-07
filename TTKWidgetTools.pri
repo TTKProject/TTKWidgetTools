@@ -1,6 +1,6 @@
 # =================================================
 # * This file is part of the TTK Widget Tools project
-# * Copyright (C) 2015 - 2019 Greedysky Studio
+# * Copyright (C) 2015 - 2020 Greedysky Studio
 #
 # * This program is free software; you can redistribute it and/or modify
 # * it under the terms of the GNU General Public License as published by
@@ -32,6 +32,7 @@ RCC_DIR = ./.build/rcc
 include(TTKVersion.pri)
 
 win32{
+    LIBS += -lIphlpapi
     equals(QT_MAJOR_VERSION, 5){
         msvc{
             CONFIG +=c++11
@@ -43,25 +44,19 @@ win32{
         }
 
         gcc{
-            QMAKE_CXXFLAGS += -std=c++11
-            QMAKE_CXXFLAGS += -Wunused-function
-            QMAKE_CXXFLAGS += -Wswitch
+            QMAKE_CXXFLAGS += -std=c++11 -Wunused-function -Wswitch
         }
     }
 
     equals(QT_MAJOR_VERSION, 4){
         gcc{
-            QMAKE_CXXFLAGS += -std=c++11
-            QMAKE_CXXFLAGS += -Wunused-function
-            QMAKE_CXXFLAGS += -Wswitch
+            QMAKE_CXXFLAGS += -std=c++11 -Wunused-function -Wswitch
         }
     }
 }
 
 unix:!mac{
-    QMAKE_CXXFLAGS += -std=c++11
-    QMAKE_CXXFLAGS += -Wunused-function
-    QMAKE_CXXFLAGS += -Wswitch
+    QMAKE_CXXFLAGS += -std=c++11 -Wunused-function -Wswitch
 }
 
 DEFINES += TTK_LIBRARY
