@@ -16,5 +16,10 @@
 # * with this program; If not, see <http://www.gnu.org/licenses/>.
 # =================================================
 
-# update time 2019.11.20
-TTKWidgetTools = 2.0.0.0
+UI_DIR = ./.build/ui
+MOC_DIR = ./.build/moc
+OBJECTS_DIR = ./.build/obj
+RCC_DIR = ./.build/rcc
+
+# update time 2020.07.05
+TTKWidgetTools = 2.1.0.0
