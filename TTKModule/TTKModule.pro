@@ -1,6 +1,6 @@
 # =================================================
 # * This file is part of the TTK Widget Tools project
-# * Copyright (C) 2015 - 2020 Greedysky Studio
+# * Copyright (C) 2015 - 2021 Greedysky Studio
 #
 # * This program is free software; you can redistribute it and/or modify
 # * it under the terms of the GNU General Public License as published by
@@ -20,6 +20,7 @@ TEMPLATE = lib
 CONFIG += TTK_BUILD_LIB
 
 include($$PWD/../TTKWidgetTools.pri)
+CONFIG += plugin lib
 
 TARGET = TTKCore
 

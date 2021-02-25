@@ -3,7 +3,7 @@
 
 /* =================================================
  * This file is part of the TTK Widget Tools project
- * Copyright (C) 2015 - 2020 Greedysky Studio
+ * Copyright (C) 2015 - 2021 Greedysky Studio
 
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -51,11 +51,11 @@ struct TTK_CORE_EXPORT TTKSlideInfo
 /*!
  * @author Greedysky <greedysky@163.com>
  */
-class TTK_CORE_EXPORT TTKTTKPictureFlowWidgetState
+class TTK_CORE_EXPORT TTKPictureFlowWidgetState
 {
 public:
-    TTKTTKPictureFlowWidgetState();
-    virtual ~TTKTTKPictureFlowWidgetState();
+    TTKPictureFlowWidgetState();
+    virtual ~TTKPictureFlowWidgetState();
 
     void reposition();
     void reset();
@@ -77,10 +77,10 @@ public:
 /*!
  * @author Greedysky <greedysky@163.com>
  */
-class TTK_CORE_EXPORT TTKTTKPictureFlowWidgetAnimator
+class TTK_CORE_EXPORT TTKPictureFlowWidgetAnimator
 {
 public:
-    TTKTTKPictureFlowWidgetAnimator();
+    TTKPictureFlowWidgetAnimator();
 
     void start(int slide);
     void stop(int slide);
@@ -88,7 +88,7 @@ public:
 
     int m_target, m_step, m_frame;
     QTimer m_animateTimer;
-    TTKTTKPictureFlowWidgetState *m_state;
+    TTKPictureFlowWidgetState *m_state;
 
 };
 
@@ -96,18 +96,18 @@ public:
 /*!
  * @author Greedysky <greedysky@163.com>
  */
-class TTK_CORE_EXPORT TTKTTKPictureFlowWidgetSoftwareRenderer
+class TTK_CORE_EXPORT TTKPictureFlowWidgetSoftwareRenderer
 {
 public:
-    TTKTTKPictureFlowWidgetSoftwareRenderer();
-    virtual ~TTKTTKPictureFlowWidgetSoftwareRenderer();
+    TTKPictureFlowWidgetSoftwareRenderer();
+    virtual ~TTKPictureFlowWidgetSoftwareRenderer();
 
     void init();
     void paint();
 
     bool  m_dirty;
     QWidget *m_widget;
-    TTKTTKPictureFlowWidgetState *m_state;
+    TTKPictureFlowWidgetState *m_state;
 
 private:
     void render();
@@ -182,9 +182,9 @@ protected:
     virtual void resizeEvent(QResizeEvent *event) override;
 
     bool m_useResize;
-    TTKTTKPictureFlowWidgetState *m_state;
-    TTKTTKPictureFlowWidgetAnimator *m_animator;
-    TTKTTKPictureFlowWidgetSoftwareRenderer *m_renderer;
+    TTKPictureFlowWidgetState *m_state;
+    TTKPictureFlowWidgetAnimator *m_animator;
+    TTKPictureFlowWidgetSoftwareRenderer *m_renderer;
     QTimer m_triggerTimer;
 
 };
